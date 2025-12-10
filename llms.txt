@@ -26,12 +26,12 @@ devtools::install_github("lucy-dwr/poppychat")
 [`ellmer::chat_openai()`](https://ellmer.tidyverse.org/reference/chat_openai.html),
 which provides a general client to chat with large language models using
 a supplied base url and API key. To get started, set the `POPPY_API_KEY`
-environment variable. See the \[\]`poppychat` quickstart
-vignette\](<https://lucy-dwr.github.io/poppychat/articles/quickstart.html>)
+environment variable. See
+[`vignette("quickstart")`](https://lucy-dwr.github.io/poppychat/articles/quickstart.md)
 for details.
 
 The main function provided by this package is
-\[\]`poppychat()`\](<https://lucy-dwr.github.io/poppychat/reference/poppy_chat.html>),
+[`poppy_chat()`](https://lucy-dwr.github.io/poppychat/reference/poppy_chat.md),
 which creates a chat client configured to connect to Poppy.
 
 ``` r
@@ -43,10 +43,11 @@ gemini_chat$chat("What's the best thing about working for the State of Californi
 #> and job stability.
 ```
 
-`ellmer` chat clients support a variety of features, including
-conversation history, token tracking, system prompts, and tool calling.
-For more information on using an `ellmer` chat client, visit the
-[`ellmer` package documentation](https://ellmer.tidyverse.org).
+[ellmer](https://ellmer.tidyverse.org) chat clients support a variety of
+features, including conversation history, token tracking, system
+prompts, and tool calling. For more information on using an `ellmer`
+chat client, review package documentation from
+[ellmer](https://ellmer.tidyverse.org).
 
 ## Currently supported models
 

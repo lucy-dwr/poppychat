@@ -75,8 +75,8 @@
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<p><code>poppychat</code> is a thin wrapper for <a href="https://ellmer.tidyverse.org/reference/chat_openai.html" class="external-link"><code>ellmer::chat_openai()</code></a>, which provides a general client to chat with large language models using a supplied base url and API key. To get started, set the <code>POPPY_API_KEY</code> environment variable. See the []<code>poppychat</code> quickstart vignette](<a href="https://lucy-dwr.github.io/poppychat/articles/quickstart.html" class="uri">https://lucy-dwr.github.io/poppychat/articles/quickstart.html</a>) for details.</p>
-<p>The main function provided by this package is []<code>poppychat()</code>](<a href="https://lucy-dwr.github.io/poppychat/reference/poppy_chat.html" class="uri">https://lucy-dwr.github.io/poppychat/reference/poppy_chat.html</a>), which creates a chat client configured to connect to Poppy.</p>
+<p><code>poppychat</code> is a thin wrapper for <code><a href="https://ellmer.tidyverse.org/reference/chat_openai.html" class="external-link">ellmer::chat_openai()</a></code>, which provides a general client to chat with large language models using a supplied base url and API key. To get started, set the <code>POPPY_API_KEY</code> environment variable. See <code><a href="articles/quickstart.html">vignette("quickstart")</a></code> for details.</p>
+<p>The main function provided by this package is <code><a href="reference/poppy_chat.html">poppy_chat()</a></code>, which creates a chat client configured to connect to Poppy.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">gemini_chat</span> <span class="op">&lt;-</span> <span class="fu">poppychat</span><span class="fu">::</span><span class="fu"><a href="reference/poppy_chat.html">poppy_chat</a></span><span class="op">(</span>model <span class="op">=</span> <span class="st">"Google Gemini 2.5 Flash"</span><span class="op">)</span></span>
 <span></span>
@@ -84,7 +84,7 @@
 <span><span class="co">#&gt; Many employees value the opportunity to serve the public and make a</span></span>
 <span><span class="co">#&gt; a meaningful difference for Californians, alongside comprehensive benefits</span></span>
 <span><span class="co">#&gt; and job stability.</span></span></code></pre></div>
-<p><code>ellmer</code> chat clients support a variety of features, including conversation history, token tracking, system prompts, and tool calling. For more information on using an <code>ellmer</code> chat client, visit the <a href="https://ellmer.tidyverse.org" class="external-link"><code>ellmer</code> package documentation</a>.</p>
+<p><a href="https://ellmer.tidyverse.org" class="external-link">ellmer</a> chat clients support a variety of features, including conversation history, token tracking, system prompts, and tool calling. For more information on using an <code>ellmer</code> chat client, review package documentation from <a href="https://ellmer.tidyverse.org" class="external-link">ellmer</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="currently-supported-models">Currently supported models<a class="anchor" aria-label="anchor" href="#currently-supported-models"></a>
