@@ -18,7 +18,7 @@ devtools::install_github("lucy-dwr/poppychat")
 
 ## Usage
 
-`poppychat` is a thin wrapper for `ellmer::chat_openai()`, which provides a general client to chat with large language models using a supplied base url and API key. To get started, set the `POPPY_API_KEY` environment variable. See  `vignette("quickstart")` for details.
+`poppychat` is a thin wrapper for `ellmer::chat_openai()`, which provides a general client to chat with large language models using a supplied base url and API key. To get started, set the `POPPY_API_KEY` environment variable. See  `vignette("poppychat")` for details.
 
 The main function provided by this package is `poppy_chat()`, which creates a chat client configured to connect to Poppy.
 
