@@ -22,17 +22,15 @@ devtools::install_github("lucy-dwr/poppychat")
 
 ## Usage
 
-`poppychat` is a thin wrapper for
-[`ellmer::chat_openai()`](https://ellmer.tidyverse.org/reference/chat_openai.html),
-which provides a general client to chat with large language models using
-a supplied base url and API key. To get started, set the `POPPY_API_KEY`
-environment variable. See
+[`poppy_chat()`](https://lucy-dwr.github.io/poppychat/reference/poppy_chat.md),
+the main function in this package, creates a chat client configured to
+connect to Poppy using a user-supplied API key.
+[`poppy_chat()`](https://lucy-dwr.github.io/poppychat/reference/poppy_chat.md)is
+a thin wrapper for
+[`ellmer::chat_openai()`](https://ellmer.tidyverse.org/reference/chat_openai.html).
+To get started, set the `POPPY_API_KEY` environment variable. See
 [`vignette("poppychat")`](https://lucy-dwr.github.io/poppychat/articles/poppychat.md)
 for details.
-
-The main function provided by this package is
-[`poppy_chat()`](https://lucy-dwr.github.io/poppychat/reference/poppy_chat.md),
-which creates a chat client configured to connect to Poppy.
 
 ``` r
 gemini_chat <- poppychat::poppy_chat(model = "Google Gemini 2.5 Flash")
@@ -53,7 +51,7 @@ features, including:
 - Structured data extraction
 - Retrieval-augmented generation
 
-For more information on using an `ellmer` chat client, review package
+For more information on using a chat client, review package
 documentation from [ellmer](https://ellmer.tidyverse.org).
 
 ## Currently supported models
