@@ -1,8 +1,5 @@
 # poppychat
 
-[![poppychat
-website](reference/figures/logo.png)](https://lucy-dwr.github.io/poppychat/)
-
 `poppychat` provides an R code interface to chat with large language
 models through Poppy, a service provided by the [California Department
 of Technology](https://cdt.ca.gov) in a pilot to a group of State of
