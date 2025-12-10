@@ -1,0 +1,20 @@
+Package: poppychat
+Title: Chat with Poppy, the State of California employee LLM service
+Version: 0.0.0.9000
+Authors@R: 
+    person("Lucy", "Andrews", , "lucy.andrews@water.ca.gov", role = c("aut", "cre"))
+Description: Tools to set up chat clients with Poppy, the State of California sandboxed LLM service for employees.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Imports: 
+    ellmer
+Suggests: 
+    dplyr,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
