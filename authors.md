@@ -2,7 +2,8 @@
 
 ## Authors
 
-- **Lucy Andrews**. Author, maintainer.
+- **[Lucy Andrews](https://www.lucyrandrews.com/about)**. Author,
+  maintainer.
 
 ## Citation
 
