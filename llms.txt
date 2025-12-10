@@ -26,7 +26,9 @@ devtools::install_github("lucy-dwr/poppychat")
 [`ellmer::chat_openai()`](https://ellmer.tidyverse.org/reference/chat_openai.html),
 which provides a general client to chat with large language models using
 a supplied base url and API key. To get started, set the `POPPY_API_KEY`
-environment variable. See `vignette("quickstart")` for details.
+environment variable. See
+[`vignette("poppychat")`](https://lucy-dwr.github.io/poppychat/articles/poppychat.md)
+for details.
 
 The main function provided by this package is
 [`poppy_chat()`](https://lucy-dwr.github.io/poppychat/reference/poppy_chat.md),
