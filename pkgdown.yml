@@ -1,0 +1,9 @@
+pandoc: 3.1.11
+pkgdown: 2.2.0
+pkgdown_sha: ~
+articles:
+  quickstart: quickstart.html
+last_built: 2025-12-10T22:06Z
+urls:
+  reference: https://lucy-dwr.github.io/poppychat/reference
+  article: https://lucy-dwr.github.io/poppychat/articles
