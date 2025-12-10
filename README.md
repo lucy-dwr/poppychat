@@ -31,7 +31,16 @@ gemini_chat$chat("What's the best thing about working for the State of Californi
 #> and job stability.
 ```
 
-`{ellmer}` chat clients support a variety of features, including conversation history, token tracking, system prompts, and tool calling. For more information on using an `ellmer` chat client, review package documentation from `{ellmer}`.
+`{ellmer}` chat clients support a variety of features, including:
+
+- Conversation history
+- Token tracking
+- System prompts
+- Tool calling
+- Structured data extraction
+- Retrieval-augmented generation
+
+For more information on using an `ellmer` chat client, review package documentation from `{ellmer}`.
 
 ## Currently supported models
 
