@@ -1,5 +1,5 @@
 ---
-title: "Quickstart"
+title: "Introduction to poppychat"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Quickstart}
@@ -26,7 +26,7 @@ devtools::install_github("lucy-dwr/poppychat")
 library(poppychat)
 ```
 
-## Get and set an API key
+## Get an API key
 
 Then, ensure that you have an API key to use Poppy. **API keys are only available to State of California employees participating in the Poppy pilot.** To get an API key:
 
@@ -34,6 +34,8 @@ Then, ensure that you have an API key to use Poppy. **API keys are only availabl
 2. Navigate to Settings in the upper-right corner
 3. Go to the Account tab
 4. Mint an API key
+
+## Set your API key
 
 Once you have a Poppy API key, store it as `POPPY_API_KEY` in your `.Renviron` file so as to be secret. **Do not publish your API key in public code repositories!**
 
