@@ -96,14 +96,13 @@ poppy_llm_gemini_25_flash$chat("Could you rephrase that, briefly and in plain la
 #> Think of them as the state's water helpers!
 ```
 
-To learn more about chatting with a chat client, see the [`ellmer`
-package](https://ellmer.tidyverse.org/index.html).
+To learn more about chatting with a chat client, see
+[ellmer](https://ellmer.tidyverse.org).
 
 ## See models
 
 Information about Poppy models that you can use are stored in the
-[`poppy_models`](https://lucy-dwr.github.io/poppychat/reference/poppy_models.html)
-object in this package (or run
+`poppy_models` object in this package (or run
 [`?poppy_models`](https://lucy-dwr.github.io/poppychat/reference/poppy_models.md)
 from R for the help page).
 
