@@ -1,0 +1,108 @@
+---
+title: "Quickstart"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Quickstart}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r knitr_opts, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Set up
+
+To set up a Poppy chat client, first install and attach the `poppychat` package:
+
+```{r install, eval = FALSE}
+devtools::install_github("lucy-dwr/poppychat")
+```
+
+```{r attach}
+library(poppychat)
+```
+
+## Get and set an API key
+
+Then, ensure that you have an API key to use Poppy. **API keys are only available to State of California employees participating in the Poppy pilot.** To get an API key:
+
+1. [Sign into Poppy](https://customeruat.sda.state.ca.gov/) in a browser
+2. Navigate to Settings in the upper-right corner
+3. Go to the Account tab
+4. Mint an API key
+
+Once you have a Poppy API key, store it as `POPPY_API_KEY` in your `.Renviron` file so as to be secret. **Do not publish your API key in public code repositories!**
+
+To pull up your `.Renviron` file for editing, run the following command:
+
+```{r open_r_environ, eval = FALSE}
+usethis::edit_r_environ()
+```
+
+Add the following line to your `.Renviron` file, replacing `your_api_key` with your actual API key:
+
+```{r set_api_key, eval = FALSE}
+POPPY_API_KEY = "your_api_key"
+```
+## Initialize a Poppy chat client
+
+Now you can initialize a Poppy chat client. By default, the chat will retrieve your API key from your `.Renviron`. You can also set the API key directly when initializing the client by passing it as an `api_key` argument to `poppy_chat`, but this is not recommended for security reasons if your code will be shared or published.
+
+```{r init_default_poppy_client, eval = FALSE}
+poppy_llm_default <- poppy_chat()
+
+poppy_llm_default$chat("Hi, who are you?")
+#> Hello! I'm a GenAI Digital Assistant hosted by the California Department of
+#> Technology (CDT) to support State of California employees. 
+#>
+#> I'm here to help you with:
+#> - Answering questions about state procedures, policies, and resources
+#> - Searching relevant documents and providing information
+#> - Assisting with work-related tasks and inquiries
+#> - Providing references to official documentation when available
+#>
+#> How can I assist you today?
+```
+
+The default model is Anthropic Claude Sonnet 4.5. You can change the model using the `model` argument.
+
+```{r init_custom_poppy_client, eval = FALSE}
+poppy_llm_gemini_25_flash <- poppy_chat(model = "Google Gemini 2.5 Flash-Lite")
+```
+
+```{r chat_gemini_25_flash, eval = FALSE}
+poppy_llm_gemini_25_flash$chat("What does the California Department of Water Resources do, briefly?")
+#> The California Department of Water Resources (DWR) is responsible for 
+#> managing and protecting the California's water resources. They oversee flood
+#> control, water conservation, and the State Water Project, which delivers
+#> water across the state.
+#> 
+#> You can find more information on their official website: 
+#> [https://water.ca.gov/](https://water.ca.gov/)
+```
+
+```{r chat_gemini_25_flash_rephrase, eval = FALSE}
+poppy_llm_gemini_25_flash$chat("Could you rephrase that, briefly and in plain language suitable for a middle school student?")
+#> Imagine California is a giant garden that needs lots of water to grow. The 
+#> Department of Water Resources is like the garden's caretaker! They make sure 
+#> there's enough water for everyone and everything – for drinking, for farms to 
+#> grow food, and to keep our rivers and lakes healthy. They also help protect
+#> us from floods, like building strong walls to keep rivers in their place when
+#> it rains a lot.
+#> 
+#> Think of them as the state's water helpers!
+```
+
+To learn more about chatting with a chat client, see the [`ellmer` package](https://ellmer.tidyverse.org/index.html).
+
+## See models
+
+Information about Poppy models that you can use are stored in the [`poppy_models`](https://lucy-dwr.github.io/poppychat/reference/poppy_models.html) object in this package (or run `?poppy_models` from R for the help page).
+
+```{r view_models}
+dplyr::glimpse(poppy_models)
+```
