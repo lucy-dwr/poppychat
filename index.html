@@ -13,6 +13,7 @@
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Chat with Poppy, the State of California employee LLM service">
 <meta name="description" content="Tools to set up chat clients with Poppy, the State of California sandboxed LLM service for employees.">
 <meta property="og:description" content="Tools to set up chat clients with Poppy, the State of California sandboxed LLM service for employees.">
+<meta property="og:image" content="https://lucy-dwr.github.io/poppychat/logo.png">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -51,27 +52,34 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="poppychat">poppychat<a class="anchor" aria-label="anchor" href="#poppychat"></a>
-</h1></div>
-<p>This package provides an R code interface to chat with large language models through Poppy, a service provided by the <a href="https://cdt.ca.gov" class="external-link">California Department of Technology</a> in a pilot to a group of State of California employees. Poppy models are sandboxed for State use. <code>poppychat</code> is intended to facilitate the secure integration of Poppy’s capabilities into R code, dashboards, and other applications.</p>
+<div class="page-header">
+<img src="logo.png" class="logo" alt=""><h1 id="poppychat">poppychat<a class="anchor" aria-label="anchor" href="#poppychat"></a>
+</h1>
+</div>
+<p><a href="https://lucy-dwr.github.io/poppychat/"><img src="reference/figures/logo.png" align="right" height="120" alt="poppychat website"></a></p>
+<!-- badges: start -->
+
+<p><code>poppychat</code> provides an R code interface to chat with large language models through Poppy, a service provided by the <a href="https://cdt.ca.gov" class="external-link">California Department of Technology</a> in a pilot to a group of State of California employees. Poppy models are sandboxed for State use. <code>poppychat</code> is intended to facilitate the secure integration of Poppy’s capabilities into R code, dashboards, and other applications.</p>
 <p>State of California employee use of Poppy should adhere to the latest <a href="https://cdt.ca.gov/policy/technology-letters/technology-letter-25-01/" class="external-link">GenAI State Policies</a>.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of <code>poppychat</code> from GitHub with:</p>
-<pre><code><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"lucy-dwr/poppychat"</span><span class="op">)</span></span></code></pre>
+<p>You can install the development version of <code>poppychat</code> from <a href="https://github.com/lucy-dwr/poppychat" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"lucy-dwr/poppychat"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<p><code>poppychat</code> is a thin wrapper for <a href="https://ellmer.tidyverse.org/reference/chat_openai.html" class="external-link"><code>ellmer::chat_openai()</code></a>, which provides a general client to chat with large language models using a supplied base url and API key. To get started, set the <code>POPPY_API_KEY</code> environment variable. See the <code>poppychat</code> quickstart vignette for details.</p>
-<p>The main function provided by this package is <code>poppychat()</code>, which creates a chat client configured to connect to Poppy.</p>
-<pre><code><span><span class="va">gemini_chat</span> <span class="op">&lt;-</span> <span class="fu">poppychat</span><span class="fu">::</span><span class="fu"><a href="reference/poppy_chat.html">poppy_chat</a></span><span class="op">(</span>model <span class="op">=</span> <span class="st">"Google Gemini 2.5 Flash"</span><span class="op">)</span></span>
+<p><code>poppychat</code> is a thin wrapper for <a href="https://ellmer.tidyverse.org/reference/chat_openai.html" class="external-link"><code>ellmer::chat_openai()</code></a>, which provides a general client to chat with large language models using a supplied base url and API key. To get started, set the <code>POPPY_API_KEY</code> environment variable. See the []<code>poppychat</code> quickstart vignette](<a href="https://lucy-dwr.github.io/poppychat/articles/quickstart.html" class="uri">https://lucy-dwr.github.io/poppychat/articles/quickstart.html</a>) for details.</p>
+<p>The main function provided by this package is []<code>poppychat()</code>](<a href="https://lucy-dwr.github.io/poppychat/reference/poppy_chat.html" class="uri">https://lucy-dwr.github.io/poppychat/reference/poppy_chat.html</a>), which creates a chat client configured to connect to Poppy.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">gemini_chat</span> <span class="op">&lt;-</span> <span class="fu">poppychat</span><span class="fu">::</span><span class="fu"><a href="reference/poppy_chat.html">poppy_chat</a></span><span class="op">(</span>model <span class="op">=</span> <span class="st">"Google Gemini 2.5 Flash"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">gemini_chat</span><span class="op">$</span><span class="fu">chat</span><span class="op">(</span><span class="st">"What's the best thing about working for the State of California? Be brief!"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Many employees value the opportunity to serve the public and make a</span></span>
 <span><span class="co">#&gt; a meaningful difference for Californians, alongside comprehensive benefits</span></span>
-<span><span class="co">#&gt; and job stability.</span></span></code></pre>
+<span><span class="co">#&gt; and job stability.</span></span></code></pre></div>
 <p><code>ellmer</code> chat clients support a variety of features, including conversation history, token tracking, system prompts, and tool calling. For more information on using an <code>ellmer</code> chat client, visit the <a href="https://ellmer.tidyverse.org" class="external-link"><code>ellmer</code> package documentation</a>.</p>
 </div>
 <div class="section level2">
@@ -115,7 +123,12 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/lucy-dwr/poppychat/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/lucy-dwr/poppychat/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>

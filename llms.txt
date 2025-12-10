@@ -1,6 +1,9 @@
 # poppychat
 
-This package provides an R code interface to chat with large language
+[![poppychat
+website](reference/figures/logo.png)](https://lucy-dwr.github.io/poppychat/)
+
+`poppychat` provides an R code interface to chat with large language
 models through Poppy, a service provided by the [California Department
 of Technology](https://cdt.ca.gov) in a pilot to a group of State of
 California employees. Poppy models are sandboxed for State use.
@@ -13,9 +16,12 @@ Policies](https://cdt.ca.gov/policy/technology-letters/technology-letter-25-01/)
 
 ## Installation
 
-You can install the development version of `poppychat` from GitHub with:
+You can install the development version of `poppychat` from
+[GitHub](https://github.com/lucy-dwr/poppychat) with:
 
-    devtools::install_github("lucy-dwr/poppychat")
+``` r
+devtools::install_github("lucy-dwr/poppychat")
+```
 
 ## Usage
 
@@ -23,18 +29,22 @@ You can install the development version of `poppychat` from GitHub with:
 [`ellmer::chat_openai()`](https://ellmer.tidyverse.org/reference/chat_openai.html),
 which provides a general client to chat with large language models using
 a supplied base url and API key. To get started, set the `POPPY_API_KEY`
-environment variable. See the `poppychat` quickstart vignette for
-details.
+environment variable. See the \[\]`poppychat` quickstart
+vignette\](<https://lucy-dwr.github.io/poppychat/articles/quickstart.html>)
+for details.
 
-The main function provided by this package is `poppychat()`, which
-creates a chat client configured to connect to Poppy.
+The main function provided by this package is
+\[\]`poppychat()`\](<https://lucy-dwr.github.io/poppychat/reference/poppy_chat.html>),
+which creates a chat client configured to connect to Poppy.
 
-    gemini_chat <- poppychat::poppy_chat(model = "Google Gemini 2.5 Flash")
+``` r
+gemini_chat <- poppychat::poppy_chat(model = "Google Gemini 2.5 Flash")
 
-    gemini_chat$chat("What's the best thing about working for the State of California? Be brief!")
-    #> Many employees value the opportunity to serve the public and make a
-    #> a meaningful difference for Californians, alongside comprehensive benefits
-    #> and job stability.
+gemini_chat$chat("What's the best thing about working for the State of California? Be brief!")
+#> Many employees value the opportunity to serve the public and make a
+#> a meaningful difference for Californians, alongside comprehensive benefits
+#> and job stability.
+```
 
 `ellmer` chat clients support a variety of features, including
 conversation history, token tracking, system prompts, and tool calling.
