@@ -44,10 +44,17 @@ gemini_chat$chat("What's the best thing about working for the State of Californi
 ```
 
 [ellmer](https://ellmer.tidyverse.org) chat clients support a variety of
-features, including conversation history, token tracking, system
-prompts, and tool calling. For more information on using an `ellmer`
-chat client, review package documentation from
-[ellmer](https://ellmer.tidyverse.org).
+features, including:
+
+- Conversation history
+- Token tracking
+- System prompts
+- Tool calling
+- Structured data extraction
+- Retrieval-augmented generation
+
+For more information on using an `ellmer` chat client, review package
+documentation from [ellmer](https://ellmer.tidyverse.org).
 
 ## Currently supported models
 
