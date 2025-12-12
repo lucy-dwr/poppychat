@@ -8,7 +8,7 @@ get_poppy_api_key()
 }
 \value{
 The value of \code{POPPY_API_KEY} or \code{NA_character_} when the variable is
-not set.
+not set or set to an empty string.
 }
 \description{
 Looks up \code{POPPY_API_KEY} in the environment for use with \code{poppy_chat()}.

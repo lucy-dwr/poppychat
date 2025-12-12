@@ -7,7 +7,7 @@
 #'   convention of accepting a function that returns a key.
 #'
 #' @return The value of `POPPY_API_KEY` or `NA_character_` when the variable is
-#'   not set.
+#'   not set or set to an empty string.
 #'
 #' @examples
 #' Sys.setenv(POPPY_API_KEY = "abc123")
@@ -15,5 +15,11 @@
 #'
 #' @export
 get_poppy_api_key <- function() {
-  Sys.getenv("POPPY_API_KEY", unset = NA_character_)
+  value <- Sys.getenv("POPPY_API_KEY", unset = NA_character_)
+
+  if (identical(value, "")) {
+    return(NA_character_)
+  }
+
+  value
 }

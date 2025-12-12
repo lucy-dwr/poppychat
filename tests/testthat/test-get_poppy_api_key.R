@@ -30,5 +30,5 @@ test_that("get_poppy_api_key returns empty string when environment variable is e
 
   Sys.setenv(POPPY_API_KEY = "")
 
-  expect_identical(get_poppy_api_key(), "")
+  expect_identical(get_poppy_api_key(), NA_character_)
 })
