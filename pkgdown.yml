@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   poppychat: poppychat.html
-last_built: 2025-12-12T15:20Z
+last_built: 2025-12-12T16:17Z
 urls:
   reference: https://lucy-dwr.github.io/poppychat/reference
   article: https://lucy-dwr.github.io/poppychat/articles

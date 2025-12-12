@@ -12,7 +12,7 @@ get_poppy_api_key()
 ## Value
 
 The value of `POPPY_API_KEY` or `NA_character_` when the variable is not
-set.
+set or set to an empty string.
 
 ## Details
 
