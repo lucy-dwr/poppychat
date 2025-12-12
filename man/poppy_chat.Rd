@@ -6,29 +6,33 @@
 \usage{
 poppy_chat(
   model = "Anthropic Claude Sonnet 4.5",
-  api_key = Sys.getenv("POPPY_API_KEY"),
+  credentials = get_poppy_api_key,
   ...
 )
 }
 \arguments{
-\item{model}{Model name passed to \code{ellmer::chat_openai()}. Defaults to \code{"Anthropic Claude Sonnet 4.5"}. To see available models, use \code{poppy_models}.}
+\item{model}{Model name passed to \code{ellmer::chat_openai_compatible()}. Defaults to \code{"Anthropic Claude Sonnet 4.5"}. To see available models, use \code{poppy_models}.}
 
-\item{api_key}{API key for Poppy. Defaults to \code{Sys.getenv("POPPY_API_KEY")}.}
+\item{credentials}{API key for Poppy. Defaults to \link{get_poppy_api_key}, a
+zero-argument function that reads the \code{POPPY_API_KEY} environment variable
+(compatible with \code{ellmer::chat_openai_compatible()} expectations).}
 
-\item{...}{Additional arguments forwarded to \code{ellmer::chat_openai()}.}
+\item{...}{Additional arguments forwarded to \code{ellmer::chat_openai_compatible()}.}
 }
 \value{
 An \code{ellmer} chat client.
 }
 \description{
-Thin wrapper around \code{ellmer::chat_openai()} configured for the Poppy endpoint.
+Thin wrapper around \code{ellmer::chat_openai_compatible()} configured for the Poppy endpoint.
 }
 \examples{
 \dontrun{
-llm <- poppy_chat()
-llm$chat("Hi, who are you?")
+  llm <- poppy_chat()
+  llm$chat("Hi, who are you?")
 }
 }
 \seealso{
-\code{\link[ellmer:chat_openai]{ellmer::chat_openai()}} for full argument and functionality details.
+\code{\link[=get_poppy_api_key]{get_poppy_api_key()}} for the default credential source and
+\code{\link[ellmer:chat_openai_compatible]{ellmer::chat_openai_compatible()}} for full argument and functionality
+details.
 }

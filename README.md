@@ -18,7 +18,7 @@ devtools::install_github("lucy-dwr/poppychat")
 
 ## Usage
 
-`poppy_chat()`, the main function in this package, creates a chat client configured to connect to Poppy using a user-supplied API key. `poppy_chat()`is a thin wrapper for `ellmer::chat_openai()`. To get started, set the `POPPY_API_KEY` environment variable. See  `vignette("poppychat")` for details.
+`poppy_chat()`, the main function in this package, creates a chat client configured to connect to Poppy using a user-supplied API key. `poppy_chat()`is a thin wrapper for `ellmer::chat_openai_compatible()`. To get started, set the `POPPY_API_KEY` environment variable. See  `vignette("poppychat")` for details.
 
 ```r
 gemini_chat <- poppychat::poppy_chat(model = "Google Gemini 2.5 Flash")

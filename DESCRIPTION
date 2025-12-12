@@ -14,7 +14,7 @@ LazyData: true
 Depends: 
     R (>= 4.1)
 Imports: 
-    ellmer
+    ellmer (>= 0.4.0)
 Suggests: 
     dplyr,
     knitr,
