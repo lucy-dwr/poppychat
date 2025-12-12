@@ -27,7 +27,7 @@ the main function in this package, creates a chat client configured to
 connect to Poppy using a user-supplied API key.
 [`poppy_chat()`](https://lucy-dwr.github.io/poppychat/reference/poppy_chat.md)is
 a thin wrapper for
-[`ellmer::chat_openai()`](https://ellmer.tidyverse.org/reference/chat_openai.html).
+[`ellmer::chat_openai_compatible()`](https://ellmer.tidyverse.org/reference/chat_openai_compatible.html).
 To get started, set the `POPPY_API_KEY` environment variable. See
 [`vignette("poppychat")`](https://lucy-dwr.github.io/poppychat/articles/poppychat.md)
 for details.
